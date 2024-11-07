@@ -75,12 +75,12 @@ const Card = ({ item, refetch }) => {
             {/* image section */}
             <div className='flex justify-between font-semibold text-[17px]'>
                 <div className='flex items-center gap-2'>
-                    <img src='../../public/images/lon-the-professional-wallpaper-preview.jpg' className='w-8 h-8 rounded-full' alt="img loading" />
+                    <img src='../../dist/images/lon-the-professional-wallpaper-preview.jpg' className='w-8 h-8 rounded-full' alt="img loading" />
                     <h1>{item?.client_name}</h1>
                 </div>
 
                 <div className='flex items-center gap-2'>
-                    <img src='../../public/images/images.jpeg' className='w-8 h-8 rounded-full' alt="img loading" />
+                    <img src='../../dist/images/images.jpeg' className='w-8 h-8 rounded-full' alt="img loading" />
                     <h1>{item?.owner_name}</h1>
                 </div>
             </div>
