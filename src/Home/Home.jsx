@@ -3,11 +3,12 @@ import Card from '../component/Card';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { axiosPublic } from '../axiosPublic/useAxiosPublic';
+import Loading from '../component/Loading';
 
 
 const Home = () => {
 
-    const { data: allData = [], refetch } = useQuery({
+    const { data: allData = [], refetch,isLoading } = useQuery({
         queryKey: ['allData'],
         queryFn: async () => {
             const res = await axiosPublic.get('/clients')
@@ -22,7 +23,10 @@ const Home = () => {
     const completed = allData?.filter((data) => data?.status === "Completed")
     const underReview = allData?.filter((data) => data?.status === "underReview")
 
-
+    
+    if(isLoading){
+        return <Loading></Loading>
+    }
 
 
 
@@ -55,9 +59,9 @@ const Home = () => {
                 </div>
 
                 {/* each cards*/}
-                <div className='mt-5 overflow-y-auto  h-[calc(100%-50px)]'>
+                <div className='mt-5 overflow-y-auto overflow-x-hidden h-[calc(100%-50px)]'>
                     {
-                        incomplete.map((data) => <Card key={data._id} item={data}></Card>)
+                        incomplete.map((data) => <Card key={data._id} item={data} refetch={refetch}></Card>)
                     }
                 </div>
             </div>
@@ -84,9 +88,9 @@ const Home = () => {
                 </div>
 
                 {/* each cards*/}
-                <div className='mt-5 overflow-y-auto  h-[calc(100%-50px)]'>
+                <div className='mt-5 overflow-y-auto overflow-x-hidden  h-[calc(100%-50px)]'>
                     {
-                        doing?.map((data) => <Card key={data._id} item={data}></Card>)
+                        doing?.map((data) => <Card key={data._id} item={data} refetch={refetch}></Card>)
                     }
                 </div>
             </div>
@@ -109,9 +113,9 @@ const Home = () => {
                 </div>
 
                 {/* each cards*/}
-                <div className='mt-5 overflow-y-auto  h-[calc(100%-50px)]'>
+                <div className='mt-5 overflow-y-auto overflow-x-hidden h-[calc(100%-50px)]'>
                     {
-                        completed?.map((data) => <Card key={data._id} item={data}></Card>)
+                        completed?.map((data) => <Card key={data._id} item={data} refetch={refetch}></Card>)
                     }
                 </div>
             </div>
@@ -135,9 +139,9 @@ const Home = () => {
                 </div>
 
                 {/* each cards*/}
-                <div className='mt-5 overflow-y-auto  h-[calc(100%-50px)]'>
+                <div className='mt-5 overflow-y-auto overflow-x-hidden h-[calc(100%-50px)]'>
                     {
-                        underReview?.map((data) => <Card key={data._id} item={data}></Card>)
+                        underReview?.map((data) => <Card key={data._id} item={data} refetch={refetch}></Card>)
                     }
                 </div>
             </div>
@@ -160,9 +164,9 @@ const Home = () => {
                 </div>
 
                 {/* each cards*/}
-                <div className='mt-5 overflow-y-auto  h-[calc(100%-50px)]'>
+                <div className='mt-5 overflow-y-auto overflow-x-hidden  h-[calc(100%-50px)]'>
                     {
-                        incomplete?.map((data) => <Card key={data._id} item={data}></Card>)
+                        incomplete?.map((data) => <Card key={data._id} item={data} refetch={refetch}></Card>)
                     }
                 </div>
             </div>

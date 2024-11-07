@@ -2,7 +2,9 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className="loading loading-spinner w-[80px] items-center justify-center"></div>
+        <div className='h-screen flex border w-full justify-center'>
+            <div className="loading loading-spinner w-[80px]"></div>
+        </div>
     );
 };
 
