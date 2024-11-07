@@ -70,7 +70,7 @@ const Card = ({ item, refetch }) => {
 
 
     return (
-        <div className='w-[520px] bg-white p-3 rounded-md mb-2'>
+        <div className='w-[500px] bg-white p-3 rounded-md mb-2'>
 
             {/* image section */}
             <div className='flex justify-between font-semibold text-[17px]'>
@@ -160,7 +160,7 @@ const Card = ({ item, refetch }) => {
                         <h3 className="font-semibold text-md mb-2">Previous Attachments</h3>
                         <ul className='overflow-x-auto'>
                             {
-                                uploadedFiles?.map((singleFile, idx) => <li className='p-1 bg-slate-200 overflow-x-auto mb-3 rounded-lg text-sm font-normal' key={idx}><span className='font-bold'>{idx+1}</span>. {singleFile.originalName}</li>)
+                                uploadedFiles?.length>0 ? uploadedFiles?.map((singleFile, idx) => <li className='p-1 bg-slate-200 overflow-x-auto mb-3 rounded-lg text-sm font-normal' key={idx}><span className='font-bold'>{idx+1}</span>. {singleFile.originalName}</li>) : <p className='text-sm'>No Attachments Available</p>
                             }
                         </ul>
                     </div>
