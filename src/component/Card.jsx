@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 const Card = ({ item, refetch }) => {
 
     const [selectedFiles, setSelectedFiles] = useState([]);
+    const [uploadedFiles, setUploadedFiles] = useState(item.files || []);
     const axiosPublic = useAxiosPublic()
 
     const handleFileChange = (event, id) => {
@@ -151,14 +152,17 @@ const Card = ({ item, refetch }) => {
                             onChange={(e) => handleFileChange(e, item._id)}
                             className="mb-4"
                         />
-                        <input className='border rounded-md bg-slate-200 font-semibold hover:bg-slate-400 py-1' onClick={(e) => handleUpload(e, item._id)} type="submit" value="Upload" />
+                        <input className='border rounded-md bg-slate-500 font-semibold text-white py-1' onClick={(e) => handleUpload(e, item._id)} type="submit" value="Upload" />
                     </form>
 
                     <hr />
-                    <div className='border border-slate-400 mt-5 rounded-lg p-1'>
+                    <div className='border-2 shadow-md border-slate-400 mt-5 rounded-lg p-1'>
                         <h3 className="font-semibold text-md mb-2">Previous Attachments</h3>
-                        
-                        
+                        <ul className='overflow-x-auto'>
+                            {
+                                uploadedFiles?.map((singleFile, idx) => <li className='p-1 bg-slate-200 overflow-x-auto mb-3 rounded-lg text-sm font-normal' key={idx}><span className='font-bold'>{idx+1}</span>. {singleFile.originalName}</li>)
+                            }
+                        </ul>
                     </div>
 
 

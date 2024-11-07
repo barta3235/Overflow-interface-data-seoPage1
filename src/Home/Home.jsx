@@ -44,7 +44,7 @@ const Home = () => {
 
 
             {/* each long card --- incomplete*/}
-            <div className='bg-slate-100 py-4 px-3'>
+            <div className='bg-slate-100 py-4 px-3 rounded-lg'>
 
                 {/* heading */}
                 <div className='flex items-center justify-between gap-5'>
@@ -73,7 +73,7 @@ const Home = () => {
 
 
             {/* each long card --- To DO*/}
-            <div className='bg-slate-100 py-4 px-3'>
+            <div className='bg-slate-100 py-4 px-3 rounded-lg'>
 
                 {/* heading */}
                 <div className='flex items-center justify-between gap-5'>
@@ -98,7 +98,7 @@ const Home = () => {
 
 
             {/* each long card --- Doing*/}
-            <div className='bg-slate-100 py-4 px-3'>
+            <div className='bg-slate-100 py-4 px-3 rounded-lg'>
 
                 {/* heading */}
                 <div className='flex items-center justify-between gap-5'>
@@ -124,7 +124,7 @@ const Home = () => {
 
 
             {/* each long card --- Under Review*/}
-            <div className='bg-slate-100 py-4 px-3'>
+            <div className='bg-slate-100 py-4 px-3 rounded-lg'>
 
                 {/* heading */}
                 <div className='flex items-center justify-between gap-5'>
@@ -149,7 +149,7 @@ const Home = () => {
 
 
             {/* each long card --- Completed*/}
-            <div className='bg-slate-100 py-4 px-3'>
+            <div className='bg-slate-100 py-4 px-3 rounded-lg'>
 
                 {/* heading */}
                 <div className='flex items-center justify-between gap-5'>
