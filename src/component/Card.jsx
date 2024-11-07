@@ -14,13 +14,13 @@ const Card = ({ item, refetch }) => {
     const [selectedFiles, setSelectedFiles] = useState([]);
     const axiosPublic = useAxiosPublic()
 
-    const handleFileChange = (event,id) => {
+    const handleFileChange = (event, id) => {
         const files = Array.from(event.target.files);
         setSelectedFiles(files);
     };
 
 
-    const handleUpload = async (e,id) => {
+    const handleUpload = async (e, id) => {
         if (selectedFiles.length > 0) {
             const formData = new FormData();
             selectedFiles.forEach((file) => {
@@ -148,11 +148,18 @@ const Card = ({ item, refetch }) => {
                         <input
                             type="file"
                             multiple
-                            onChange={(e)=>handleFileChange(e,item._id)}
+                            onChange={(e) => handleFileChange(e, item._id)}
                             className="mb-4"
                         />
-                        <input className='border rounded-md bg-slate-200 font-semibold hover:bg-slate-400 py-1' onClick={(e)=>handleUpload(e,item._id)} type="submit" value="Upload" />
+                        <input className='border rounded-md bg-slate-200 font-semibold hover:bg-slate-400 py-1' onClick={(e) => handleUpload(e, item._id)} type="submit" value="Upload" />
                     </form>
+
+                    <hr />
+                    <div className='border border-slate-400 mt-5 rounded-lg p-1'>
+                        <h3 className="font-semibold text-md mb-2">Previous Attachments</h3>
+                        
+                        
+                    </div>
 
 
                 </div>
