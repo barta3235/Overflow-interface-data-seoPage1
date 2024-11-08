@@ -103,10 +103,10 @@ const Card = ({ item, refetch }) => {
             {/* bottom section */}
             <div className='flex mt-3 text-slate-600 justify-between'>
                 <div>
-                    <img src='../../public/images/lon-the-professional-wallpaper-preview.jpg' className='w-8 h-8 rounded-full' alt="img loading" />
+                    <img src='/images/lon-the-professional-wallpaper-preview.jpg' className='w-8 h-8 rounded-full' alt="img loading" />
                 </div>
                 <div>
-                    <img src='../../public/images/images.jpeg' className='w-8 h-8 rounded-full' alt="img loading" />
+                    <img src='/images/images.jpeg' className='w-8 h-8 rounded-full' alt="img loading" />
                 </div>
                 <div className='bg-slate-200 p-1 rounded-full font-semibold'>
                     <h1>12+</h1>
