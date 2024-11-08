@@ -1,8 +1,10 @@
-# React + Vite
+# BACK-END REPOSITORY  ------  https://github.com/barta3235/Overflow-interface-data-seoPage1-server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live Link  ----- https://overflow-interface-data-seo-page1.vercel.app/
 
-Currently, two official plugins are available:
+# API Link ----- https://overflow-interface-data-seo-page1-server.vercel.app/
+# API Link for all card data ---- https://overflow-interface-data-seo-page1-server.vercel.app/clients
+# API (example) Link for attachments to individual card/attachment provider ---- https://overflow-interface-data-seo-page1-server.vercel.app/attachments/672c342ae9575d05d20a0670
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# ReactJS for the client end | Node JS (Express JS) for the backend | MongoDB as the database for storing info and attachemnts.
